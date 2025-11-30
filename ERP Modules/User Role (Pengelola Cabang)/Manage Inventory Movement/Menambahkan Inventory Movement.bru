@@ -1,0 +1,43 @@
+meta {
+  name: Menambahkan Inventory Movement
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/inventory-movement
+  body: json
+  auth: inherit
+}
+
+body:json {
+  // {
+  //   "produkId": "691b7fa773c82aa42aa723cb",
+  //   "gudangId": "691b821073c82aa42aa723dd",
+  //   "tipe": "MASUK",
+  //   "jumlah": 50,
+  //   "catatan": "Pembelian bahan baku dari supplier"
+  // }
+  
+  // {
+  //   "produkId": "691b7fa773c82aa42aa723cb",
+  //   "gudangId": "691b821073c82aa42aa723dd",
+  //   "tipe": "KELUAR",
+  //   "jumlah": 50,
+  //   "catatan": "Pembelian bahan baku dari supplier"
+  // }
+  
+  {
+    "produkId": "691b9482b5de44e7662e36b4",
+    "tipe": "TRANSFER",
+    "jumlah": 10,
+    "gudangAsalId": "691b949eb5de44e7662e36b8",
+    "gudangTujuanId": "691b94a9b5de44e7662e36ba",
+    "catatan": "Mutasi barang antar gudang"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

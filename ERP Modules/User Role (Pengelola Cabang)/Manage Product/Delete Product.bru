@@ -1,0 +1,26 @@
+meta {
+  name: Delete Product
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{corequarry_base_url_api}}/api/branch-manager/product/{{product_id}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "nama": "Sirtu (Pasir Batu)",
+      "kodeSku": "SRT01",
+      "deskripsi": "Campuran pasir dan batu untuk urugan dan pemadatan",
+      "satuan": "M³",
+      "hargaJual": 120000,
+      "aktif": true
+    }
+}
+
+settings {
+  encodeUrl: true
+}

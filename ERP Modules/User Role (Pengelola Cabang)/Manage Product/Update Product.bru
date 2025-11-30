@@ -1,0 +1,26 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{corequarry_base_url_api}}/api/branch-manager/product/{{product_id}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "nama": "Batu Split 1/2",
+      "kodeSku": "SP12",
+      "deskripsi": "Batu pecah ukuran 1/2 untuk cor dak dan struktur bangunan",
+      "satuan": "M³",
+      "hargaJual": 165000,
+      "aktif": true
+    }
+}
+
+settings {
+  encodeUrl: true
+}

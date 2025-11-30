@@ -1,0 +1,20 @@
+meta {
+  name: Read User Profile
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{corequarry_base_url_api}}/api/customer/account/profile
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_customer}}
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

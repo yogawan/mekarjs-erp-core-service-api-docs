@@ -1,0 +1,25 @@
+meta {
+  name: Menghapus Warehouse
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{corequarry_base_url_api}}/api/warehouse/{{warehouse_id}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nama": "Gudang Utama",
+    "kode": "GD001",
+    "alamat": "Jl. Raya Wonosari KM 7",
+    "deskripsi": "Gudang pusat untuk bahan jadi"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

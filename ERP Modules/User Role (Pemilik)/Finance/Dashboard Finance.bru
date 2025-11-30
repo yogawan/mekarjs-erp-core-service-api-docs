@@ -1,0 +1,20 @@
+meta {
+  name: Dashboard Finance
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{corequarry_base_url_api}}/api/owner/finance
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_owner}}
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+}

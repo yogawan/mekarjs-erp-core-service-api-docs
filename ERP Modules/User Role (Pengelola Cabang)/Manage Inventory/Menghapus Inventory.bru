@@ -1,0 +1,15 @@
+meta {
+  name: Menghapus Inventory
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{corequarry_base_url_api}}/api/inventory/{{inventory_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

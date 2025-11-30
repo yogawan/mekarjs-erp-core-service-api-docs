@@ -1,0 +1,15 @@
+meta {
+  name: Read Detail Product
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{corequarry_base_url_api}}/api/customer/product-showcase/{{product_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

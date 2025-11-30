@@ -1,0 +1,26 @@
+meta {
+  name: Create New Branch
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/owner/branch
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "namaCabang": "PT. Mekar Jaya Sejahtera (Stone Crusher III)",
+    "kodeCabang": "KLT03",
+    "alamat": "Mekar jaya 4, Jl. Deles Indah, Kebonarum, Basin, Kebonarum, Klaten Regency, Central Java 57486",
+    "googleMapsLink": "https://maps.app.goo.gl/hDmMbov1JamdMjS37",
+    "kontak": "support@mekarjs.com"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

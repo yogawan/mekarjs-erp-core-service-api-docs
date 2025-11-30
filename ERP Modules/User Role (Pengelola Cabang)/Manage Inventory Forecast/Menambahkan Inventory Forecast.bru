@@ -1,0 +1,27 @@
+meta {
+  name: Menambahkan Inventory Forecast
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/inventory-forecast
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "produkId": "691b95b90d7f2fcf95e18a79",
+    "gudangId": "691b95c40d7f2fcf95e18a7c",
+    "stokSaatIni": 120,
+    "permintaanDiprediksi": 45,
+    "periode": "mingguan",
+    "tanggalPrediksi": "2025-01-01"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

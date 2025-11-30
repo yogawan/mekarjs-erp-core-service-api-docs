@@ -1,0 +1,25 @@
+meta {
+  name: Verify OTP
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/customer/account/verify-otp
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nama": "Yogawan Aditya Pratama",
+    "email": "yogawanadityapratama@gmail.com",
+    "password": "123123123",
+    "otp": "320659"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

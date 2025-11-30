@@ -1,0 +1,15 @@
+meta {
+  name: Melihat Semua Warehouse
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{corequarry_base_url_api}}/api/warehouse
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

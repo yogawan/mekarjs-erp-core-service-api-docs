@@ -1,0 +1,25 @@
+meta {
+  name: Menambahkan Warehouse
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/warehouse
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nama": "Gudang 1",
+    "kode": "GD001",
+    "alamat": "Jl. Raya Wonosari KM 7",
+    "deskripsi": "Gudang pusat untuk bahan jadi"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

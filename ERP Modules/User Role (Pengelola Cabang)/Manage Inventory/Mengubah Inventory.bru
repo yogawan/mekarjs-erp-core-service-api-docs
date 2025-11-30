@@ -1,0 +1,25 @@
+meta {
+  name: Mengubah Inventory
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{corequarry_base_url_api}}/api/inventory/{{inventory_id}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "produkId": "691b7fa773c82aa42aa723cb",
+    "gudangId": "691b821073c82aa42aa723dd",
+    "jumlah": 50,
+    "stokMinimum": 10
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

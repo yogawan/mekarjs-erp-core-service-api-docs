@@ -1,0 +1,22 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/branch-manager/account/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "yogawanadityapratama@gmail.com",
+    "password": "123123123"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

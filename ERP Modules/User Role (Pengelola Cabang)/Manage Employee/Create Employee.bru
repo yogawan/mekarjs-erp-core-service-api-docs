@@ -1,0 +1,26 @@
+meta {
+  name: Create Employee
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/auth/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nama": "Yogawan Aditya Pratama",
+    "email": "yogawanadityapratama@gmail.com",
+    "password": "123123123",
+    "role": "pengelola_cabang",
+    "cabangId": "691c31b5e9aaf18a1379c318"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

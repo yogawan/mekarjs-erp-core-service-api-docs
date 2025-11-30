@@ -1,0 +1,15 @@
+meta {
+  name: Read Detail Account (Pengelola Cabang)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{corequarry_base_url_api}}/api/branch-manager/{{branch_manager_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

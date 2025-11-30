@@ -1,0 +1,26 @@
+meta {
+  name: Bertanya ke AI
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/owner/ai-llm
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_owner}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "askToCoreQuarry": "Apa itu AI?"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

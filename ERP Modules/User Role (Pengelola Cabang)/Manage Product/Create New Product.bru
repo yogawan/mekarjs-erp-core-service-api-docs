@@ -1,0 +1,28 @@
+meta {
+  name: Create New Product
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{corequarry_base_url_api}}/api/branch-manager/product
+  body: json
+  auth: inherit
+}
+
+body:json {
+    {
+      "nama": "Pasir Halus",
+      "kodeSku": "PSH01",
+      "deskripsi": "Pasir halus untuk plesteran dan pasangan bata",
+      "satuan": "M³",
+      "hargaJual": 110000,
+      "aktif": true,
+      "cabangId": "691c308ee9aaf18a1379c30f"
+    }
+  
+}
+
+settings {
+  encodeUrl: true
+}

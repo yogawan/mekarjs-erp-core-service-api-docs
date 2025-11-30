@@ -1,0 +1,15 @@
+meta {
+  name: Delete Account (Pengelola Cabang)
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{corequarry_base_url_api}}/api/branch-manager
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

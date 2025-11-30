@@ -1,0 +1,15 @@
+meta {
+  name: Read Detail Branch
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{corequarry_base_url_api}}/api/owner/branch/{{branch_id}}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
