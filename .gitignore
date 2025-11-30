@@ -1,0 +1,35 @@
+# Bruno workspace & collections
+.bruno/
+*.bru
+
+# Ignore semua env kecuali contoh
+.env
+.env.*
+!.env.example
+
+# Node.js / JavaScript common ignores
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+.next/
+out/
+
+# Logs
+logs/
+*.log
+*.log.*
+debug.log
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.swp
+*.tmp

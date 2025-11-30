@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "MekarJS ERP",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
