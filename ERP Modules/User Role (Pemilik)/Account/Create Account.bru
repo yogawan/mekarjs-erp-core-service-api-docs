@@ -5,15 +5,15 @@ meta {
 }
 
 post {
-  url: {{corequarry_base_url_api}}/api/owner/account/register
+  url: {{mekarjs_base_url_api}}/api/owner/account/register
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "nama": "Alif Arya Kusuma",
-    "email": "alifarya679@gmail.com",
+    "nama": "Ali Sahat",
+    "email": "alisahat@gmail.com",
     "password": "123123123"
   }
   
@@ -21,4 +21,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

@@ -1,15 +1,16 @@
 meta {
-  name: Melihat Semua Inventory
+  name: Read All Inventory
   type: http
   seq: 2
 }
 
 get {
-  url: {{corequarry_base_url_api}}/api/inventory
+  url: {{mekarjs_base_url_api}}/api/inventory
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

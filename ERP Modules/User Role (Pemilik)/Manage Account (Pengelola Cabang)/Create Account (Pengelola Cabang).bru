@@ -5,15 +5,20 @@ meta {
 }
 
 post {
-  url: {{corequarry_base_url_api}}/api/auth/branch-manager/register
+  url: {{mekarjs_base_url_api}}/api/owner/branch-manager/register
   body: json
   auth: inherit
 }
 
+headers {
+  Authorization: Bearer {{token_owner}}
+  Content-Type: application/json
+}
+
 body:json {
   {
-    "nama": "Danis Wara Wardana",
-    "email": "daniswara@gmail.com",
+    "nama": "Miko Dian Rachmadany",
+    "email": "mikodian@gmail.com",
     "password": "123123123",
     "cabangId": "691c3194e9aaf18a1379c316"
   }
@@ -22,4 +27,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

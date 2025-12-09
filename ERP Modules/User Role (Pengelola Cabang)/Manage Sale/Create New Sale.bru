@@ -1,0 +1,29 @@
+meta {
+  name: Create New Sale
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/sale
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "customerId": "692de813ac91e7fbaf6f3149", 
+    "productId": "6929a2c2b56175a4552814aa", 
+    "jumlah": 100
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Read Detail Order Customer
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/order-customer/{{order_customer_id}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

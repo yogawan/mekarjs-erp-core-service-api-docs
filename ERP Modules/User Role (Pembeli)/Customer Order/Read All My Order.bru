@@ -1,0 +1,28 @@
+meta {
+  name: Read All My Order
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{mekarjs_base_url_api}}/api/customer/payment/history
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_customer}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "productId": "6929a2c2b56175a4552814aa",
+    "quantity": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

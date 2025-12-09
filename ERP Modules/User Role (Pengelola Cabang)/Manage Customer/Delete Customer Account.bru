@@ -1,0 +1,21 @@
+meta {
+  name: Delete Customer Account
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/customers/{{customers_id}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

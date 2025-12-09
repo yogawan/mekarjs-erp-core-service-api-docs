@@ -1,11 +1,11 @@
 meta {
-  name: Menambahkan Warehouse
+  name: Create New Warehouse
   type: http
   seq: 1
 }
 
 post {
-  url: {{corequarry_base_url_api}}/api/warehouse
+  url: {{mekarjs_base_url_api}}/api/warehouse
   body: json
   auth: inherit
 }
@@ -22,4 +22,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

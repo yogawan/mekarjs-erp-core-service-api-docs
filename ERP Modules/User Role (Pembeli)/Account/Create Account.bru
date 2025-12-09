@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{corequarry_base_url_api}}/api/customer/account/register
+  url: {{mekarjs_base_url_api}}/api/customer/account/create-account
   body: json
   auth: inherit
 }
@@ -13,7 +13,7 @@ post {
 body:json {
   {
     "nama": "Yogawan Aditya Pratama",
-    "email": "yogawanadityapratama@gmail.com",
+    "email": "yogaoneadityapratama@gmail.com",
     "alamat": "Prambanan, Klaten, Solo Raya, Indonesia",
     "password": "123123123"
   }
@@ -22,4 +22,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

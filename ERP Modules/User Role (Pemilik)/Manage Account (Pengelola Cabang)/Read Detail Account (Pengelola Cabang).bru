@@ -5,11 +5,21 @@ meta {
 }
 
 get {
-  url: {{corequarry_base_url_api}}/api/branch-manager/{{branch_manager_id}}
+  url: {{mekarjs_base_url_api}}/api/owner/branch-manager/{{branch_manager_id}}
   body: none
   auth: inherit
 }
 
+headers {
+  Authorization: Bearer {{token_owner}}
+  Content-Type: application/json
+}
+
+vars:pre-request {
+  branch_manager_id: 692d5a8c597dcf239fbf8a63
+}
+
 settings {
   encodeUrl: true
+  timeout: 0
 }

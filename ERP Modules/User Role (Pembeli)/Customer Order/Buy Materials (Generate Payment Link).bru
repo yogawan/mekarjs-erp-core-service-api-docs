@@ -1,0 +1,28 @@
+meta {
+  name: Buy Materials (Generate Payment Link)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mekarjs_base_url_api}}/api/customer/payment/create-link
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_customer}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "productId": "6929a2c2b56175a4552814aa",
+    "quantity": 10
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

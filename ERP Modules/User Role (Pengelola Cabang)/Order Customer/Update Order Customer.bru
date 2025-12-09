@@ -1,0 +1,26 @@
+meta {
+  name: Update Order Customer
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/order-customer/{{order_customer_id}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+}
+
+body:json {
+  {
+    "orderStatus": "sedang_loading"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

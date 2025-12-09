@@ -1,0 +1,32 @@
+meta {
+  name: Update Supplier
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/supplier/{{supplier_id}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+  Content-Type: application/json
+}
+
+body:json {
+    {
+      "namaPerusahaan": "PT. Bitcoin Mining Merapi",
+      "email": "support@bitcoinminingmerapi.com",
+      "kontak": "+62-878-6655-9901",
+      "alamatPerusahaan": "Jl. Raya Muntilan – Yogyakarta No. 88, Magelang",
+      "materialYangDiSupply": ["Sirtu", "Pasir Vulkanik", "Abu Batu"],
+      "isActive": true
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

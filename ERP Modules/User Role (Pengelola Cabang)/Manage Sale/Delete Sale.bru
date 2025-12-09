@@ -1,0 +1,21 @@
+meta {
+  name: Delete Sale
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/sale/{{sale_id}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

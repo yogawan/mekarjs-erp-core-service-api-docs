@@ -5,11 +5,12 @@ meta {
 }
 
 delete {
-  url: {{corequarry_base_url_api}}/api/inventory-forecast/{{inventory-forecast_id}}
+  url: {{mekarjs_base_url_api}}/api/inventory-forecast/{{inventory_forecast_id}}
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

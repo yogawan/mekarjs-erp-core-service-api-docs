@@ -1,0 +1,28 @@
+meta {
+  name: Callback Payment (Midtrans)
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://mekarjs-erp-core-service.yogawanadityapratama.com/api/customer/payment/webhook
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_customer}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "productId": "6929a2c2b56175a4552814aa",
+    "quantity": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

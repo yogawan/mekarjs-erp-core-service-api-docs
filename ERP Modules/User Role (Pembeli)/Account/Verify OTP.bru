@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{corequarry_base_url_api}}/api/customer/account/verify-otp
+  url: {{mekarjs_base_url_api}}/api/customer/account/verify-otp
   body: json
   auth: inherit
 }
@@ -13,13 +13,14 @@ post {
 body:json {
   {
     "nama": "Yogawan Aditya Pratama",
-    "email": "yogawanadityapratama@gmail.com",
+    "email": "yogaoneadityapratama@gmail.com",
     "password": "123123123",
-    "otp": "320659"
+    "otp": "644574"
   }
   
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

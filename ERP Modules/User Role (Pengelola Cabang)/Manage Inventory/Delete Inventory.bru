@@ -1,15 +1,16 @@
 meta {
-  name: Menghapus Inventory
+  name: Delete Inventory
   type: http
   seq: 5
 }
 
 delete {
-  url: {{corequarry_base_url_api}}/api/inventory/{{inventory_id}}
+  url: {{mekarjs_base_url_api}}/api/inventory/{{inventory_id}}
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

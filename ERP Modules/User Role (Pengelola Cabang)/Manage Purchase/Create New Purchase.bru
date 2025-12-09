@@ -1,0 +1,30 @@
+meta {
+  name: Create New Purchase
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/purchase
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "supplierId": "692de447182bb84b0c9147b6",
+    "namaMaterial": "Abu Batu",
+    "hargaPerUnit": 50000,
+    "jumlah": 100
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

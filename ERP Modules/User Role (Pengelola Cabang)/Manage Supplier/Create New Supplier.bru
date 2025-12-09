@@ -1,0 +1,32 @@
+meta {
+  name: Create New Supplier
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{mekarjs_base_url_api}}/api/branch-manager/supplier
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{token_branch_manager}}
+  Content-Type: application/json
+}
+
+body:json {
+    {
+      "namaPerusahaan": "PT. Pasir Merapi Nusantara",
+      "email": "support@pasirmerapinusantara.com",
+      "kontak": "+62-813-7766-4002",
+      "alamatPerusahaan": "Jl. Magelang – Yogyakarta KM 17, Sleman",
+      "materialYangDiSupply": ["Pasir Vulkanik", "Abu Batu", "Sirtu Kasar"],
+      "isActive": true
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

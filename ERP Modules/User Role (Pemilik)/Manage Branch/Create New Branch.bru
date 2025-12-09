@@ -5,15 +5,15 @@ meta {
 }
 
 post {
-  url: {{corequarry_base_url_api}}/api/owner/branch
+  url: {{mekarjs_base_url_api}}/api/owner/branch
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "namaCabang": "PT. Mekar Jaya Sejahtera (Stone Crusher III)",
-    "kodeCabang": "KLT03",
+    "namaCabang": "PT. Mekar Jaya Sejahtera (Stone Crusher IV)",
+    "kodeCabang": "KLT04",
     "alamat": "Mekar jaya 4, Jl. Deles Indah, Kebonarum, Basin, Kebonarum, Klaten Regency, Central Java 57486",
     "googleMapsLink": "https://maps.app.goo.gl/hDmMbov1JamdMjS37",
     "kontak": "support@mekarjs.com"
@@ -23,4 +23,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
